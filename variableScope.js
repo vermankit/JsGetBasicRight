@@ -42,3 +42,4 @@ try {
 
 console.log(radio); // this will print boat
 console.log(tv); // this will print mi
+console.log(error);// this will throw error as catch scope is block
