@@ -49,3 +49,38 @@ console.log(d.hasOwnProperty);
 // undefined, because d doesn't inherit from Object.prototype
 
 
+////////////////////////////////////////////////////////////////////
+// Inheritance in javascript via prototype.
+
+function tv(){
+    this.screen = "led"
+}
+
+tv.prototype = {
+    playChannel : function(){
+          console.log("Played")
+    }
+}
+
+
+function SmartTv(){    
+    this.musicPlayer = "boss"
+}  
+
+SmartTv.prototype = new tv();
+
+SmartTv.prototype.playMusic = function(){
+   console.log("music played");
+}
+
+
+
+var sma = new SmartTv();
+sma.playMusic();
+sma.playChannel();
+
+
+
+
+
+
