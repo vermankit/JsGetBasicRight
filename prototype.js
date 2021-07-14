@@ -66,7 +66,7 @@ tv.prototype = {
 function SmartTv(){    
     this.musicPlayer = "boss"
 }  
-
+/// here we are assigning the prototype property from tv object
 SmartTv.prototype = new tv();
 
 SmartTv.prototype.playMusic = function(){
@@ -78,6 +78,8 @@ SmartTv.prototype.playMusic = function(){
 var sma = new SmartTv();
 sma.playMusic();
 sma.playChannel();
+
+
 
 
 
